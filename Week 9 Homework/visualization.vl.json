@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 400,
+  "title": "Choropleth Map of Malaysia",
+  "data": {
+    "url": "C:\\Users\\User\\Downloads\\Malaysia Tourism Data\\malaysia.geojson",
+    "format": {"type": "json", "property": "features"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "values": [
+            {"name": "Johor", "value": 100},
+            {"name": "Kedah", "value": 80},
+            {"name": "Kelantan", "value": 60},
+            {"name": "Melaka", "value": 50},
+            {"name": "Negeri Sembilan", "value": 70},
+            {"name": "Pahang", "value": 90},
+            {"name": "Pulau Pinang", "value": 85},
+            {"name": "Perak", "value": 75},
+            {"name": "Perlis", "value": 40},
+            {"name": "Sabah", "value": 65},
+            {"name": "Sarawak", "value": 95},
+            {"name": "Selangor", "value": 110},
+            {"name": "Terengganu", "value": 55},
+            {"name": "W.P. Kuala Lumpur", "value": 120},
+            {"name": "W.P. Labuan", "value": 45},
+            {"name": "W.P. Putrajaya", "value": 35}
+          ]
+        },
+        "key": "name",
+        "fields": ["value"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "legend": {"title": "Value"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "State"},
+      {"field": "value", "type": "quantitative", "title": "Value"}
+    ]
+  },
+  "config": {}
+}
