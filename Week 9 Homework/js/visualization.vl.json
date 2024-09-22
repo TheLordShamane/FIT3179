@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
+  "width": 800,
   "height": 600,
-  "title": "Choropleth Map of Malaysia - Tourist visited by",
+  "title": "Tourists Visiting Malaysia by State (2023)",
   "data": {
     "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
     "format": {"type": "topojson", "feature": "states"}
@@ -36,19 +36,39 @@
       }
     }
   ],
-  "projection": {"type": "mercator"},
-  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
-  "encoding": {
-    "color": {
-      "field": "tourists",
-      "type": "quantitative",
-      "scale": {"scheme": "greenblue"},
-      "legend": {"title": "Total Tourists"}
-    },
-    "tooltip": [
-      {"field": "properties.Name", "type": "nominal", "title": "State"},
-      {"field": "tourists", "type": "quantitative", "title": "Total Tourists"}
-    ]
+  "projection": {
+    "type": "mercator",
+    "scale": 2500,
+    "center": [107.9758, 4.2105]
   },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "field": "tourists",
+          "type": "quantitative",
+          "scale": {"scheme": "blues"},
+          "legend": {"title": "Total Tourists"}
+        },
+        "tooltip": [
+          {"field": "properties.Name", "type": "nominal", "title": "State"},
+          {"field": "tourists", "type": "quantitative", "title": "Total Tourists"}
+        ]
+      }
+    },
+    {
+      "mark": "geoshape",
+      "data": {"graticule": true},
+      "encoding": {
+        "stroke": {"value": "gray"},
+        "strokeWidth": {"value": 0.5}
+      }
+    }
+  ],
   "config": {}
 }
