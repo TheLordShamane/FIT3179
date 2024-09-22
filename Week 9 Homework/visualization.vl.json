@@ -4,7 +4,7 @@
   "height": 400,
   "title": "Choropleth Map of Malaysia",
   "data": {
-    "url": "C:\\Users\\User\\Downloads\\Malaysia Tourism Data\\malaysia.geojson",
+    "url": "https://github.com/TheLordShamaneM/FIT3179/blob/main/Week%209%20Homework/malaysia.geojson",
     "format": {"type": "json", "property": "features"}
   },
   "transform": [
