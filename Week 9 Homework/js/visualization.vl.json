@@ -2,37 +2,37 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height": 400,
-  "title": "Choropleth Map of Malaysia",
+  "title": "Choropleth Map of Malaysia - Tourist visited by",
   "data": {
-    "url": "https://github.com/TheLordShamaneM/FIT3179/blob/main/Week%209%20Homework/malaysia.geojson",
-    "format": {"type": "json", "property": "features"}
+    "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
+    "format": {"type": "topojson", "feature": "states"}
   },
   "transform": [
     {
-      "lookup": "properties.name",
+      "lookup": "properties.Name",
       "from": {
         "data": {
           "values": [
-            {"name": "Johor", "value": 100},
-            {"name": "Kedah", "value": 80},
-            {"name": "Kelantan", "value": 60},
-            {"name": "Melaka", "value": 50},
-            {"name": "Negeri Sembilan", "value": 70},
-            {"name": "Pahang", "value": 90},
-            {"name": "Pulau Pinang", "value": 85},
-            {"name": "Perak", "value": 75},
-            {"name": "Perlis", "value": 40},
-            {"name": "Sabah", "value": 65},
-            {"name": "Sarawak", "value": 95},
-            {"name": "Selangor", "value": 110},
-            {"name": "Terengganu", "value": 55},
-            {"name": "W.P. Kuala Lumpur", "value": 120},
-            {"name": "W.P. Labuan", "value": 45},
-            {"name": "W.P. Putrajaya", "value": 35}
+            {"name": "Johor", "tourists": 8922.996},
+            {"name": "Kedah", "tourists": 6452.428},
+            {"name": "Kelantan", "tourists": 4085.791},
+            {"name": "Melaka", "tourists": 4991.130},
+            {"name": "Negeri Sembilan", "tourists": 4255.452},
+            {"name": "Pahang", "tourists": 8537.106},
+            {"name": "Pulau Pinang", "tourists": 4069.699},
+            {"name": "Perak", "tourists": 7503.392},
+            {"name": "Perlis", "tourists": 735.990},
+            {"name": "Sabah", "tourists": 5775.138},
+            {"name": "Sarawak", "tourists": 5324.627},
+            {"name": "Selangor", "tourists": 8455.683},
+            {"name": "Terengganu", "tourists": 4060.009},
+            {"name": "W.P. Kuala Lumpur", "tourists": 5724.790},
+            {"name": "W.P. Labuan", "tourists": 164.106},
+            {"name": "W.P. Putrajaya", "tourists": 501.087}
           ]
         },
         "key": "name",
-        "fields": ["value"]
+        "fields": ["tourists"]
       }
     }
   ],
@@ -40,14 +40,14 @@
   "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
   "encoding": {
     "color": {
-      "field": "value",
+      "field": "tourists",
       "type": "quantitative",
       "scale": {"scheme": "blues"},
-      "legend": {"title": "Value"}
+      "legend": {"title": "Total Tourists"}
     },
     "tooltip": [
-      {"field": "properties.name", "type": "nominal", "title": "State"},
-      {"field": "value", "type": "quantitative", "title": "Value"}
+      {"field": "properties.Name", "type": "nominal", "title": "State"},
+      {"field": "tourists", "type": "quantitative", "title": "Total Tourists"}
     ]
   },
   "config": {}
