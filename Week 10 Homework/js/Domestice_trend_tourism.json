@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Domestic Visitors by State (2017-2023)",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Week%2010%20Homework/Data/cleaned_domestic_visitors_2017_2023.csv",
+      "format": {
+        "type": "csv"
+      }
+    },
+    "params": [
+      {
+        "name": "state_selection",
+        "bind": {
+          "input": "select",
+          "options": [null, "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", "Sarawak"],
+          "labels": ["All", "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", "Sarawak"],
+          "name": "State Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "state_selection == null || datum.State == state_selection"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "Visitors",
+        "type": "quantitative",
+        "title": "Number of Visitors (in millions)"
+      },
+      "color": {
+        "field": "State",
+        "type": "nominal",
+        "title": "State"
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Year", "type": "ordinal"},
+        {"field": "Visitors", "type": "quantitative"}
+      ]
+    },
+    "mark": "line"
+  }
+  
