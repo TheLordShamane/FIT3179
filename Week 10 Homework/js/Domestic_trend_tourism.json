@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Domestic Visitors by State (2017-2023)",
-  "width": 800,
-  "height": 600,
+  "width": 900,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Week%2010%20Homework/Data/cleaned_domestic_visitors_2017_2023.csv",
     "format": {

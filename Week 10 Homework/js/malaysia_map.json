@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
-    "height": 600,
+    "width": 1000,
+    "height": 400,
     "title": "Tourists Visiting Malaysia by State (2023)",
     "data": {
       "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",

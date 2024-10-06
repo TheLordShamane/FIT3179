@@ -12,11 +12,14 @@
 </head>
 
 <body>
+  <!-- Header for the page -->
+  <h1>Tourism in Malaysia</h1>
+
   <!-- Div for Malaysia Map -->
   <div id="malaysia_map"></div>
   
   <!-- Div for Domestic Tourism Trend -->
-  <div id="Domestice_trend_tourism"></div>
+  <div id="Domestic_trend_tourism"></div>
 
   <script type="text/javascript">
     // Embed Malaysia map visualization
@@ -25,8 +28,8 @@
     }).catch(console.error);
 
     // Embed Domestic Tourism Trend visualization
-    var domesticTourismTrendSpec = "js/Domestice_trend_tourism.json";
-    vegaEmbed('#domestic_tourism_trend', domesticTourismTrendSpec).then(function(result) {
+    var domesticTourismTrendSpec = "js/Domestic_trend_tourism.json";
+    vegaEmbed('#Domestic_trend_tourism', domesticTourismTrendSpec).then(function(result) {
     }).catch(console.error);
   </script>
 </body>
