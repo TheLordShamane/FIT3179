@@ -1,16 +1,16 @@
 h1 {
-    text-align: center; /* Center the header text */
-    margin-bottom: 20px; /* Add space below the header */
-    font-size: 2em; /* Increase the font size */
-    color: #333; /* Change the text color */
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 2em;
+    color: #333; 
 }
 
 body, html {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: column; /* Horizontally center */
-    align-items: center; /* Vertically center */
+    justify-content: column;
+    align-items: center; 
     flex-direction: column;
   }
 
