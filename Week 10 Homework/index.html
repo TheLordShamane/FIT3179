@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Week 10 Homework</title>
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+
+<body>
+  <!-- Div for Malaysia Map -->
+  <div id="malaysia_map"></div>
+  
+  <!-- Div for Domestic Tourism Trend -->
+  <div id="Domestice_trend_tourism"></div>
+
+  <script type="text/javascript">
+    // Embed Malaysia map visualization
+    var malaysiaMapSpec = "js/malaysia_map.json";
+    vegaEmbed('#malaysia_map', malaysiaMapSpec).then(function(result) {
+    }).catch(console.error);
+
+    // Embed Domestic Tourism Trend visualization
+    var domesticTourismTrendSpec = "js/Domestice_trend_tourism.json";
+    vegaEmbed('#domestic_tourism_trend', domesticTourismTrendSpec).then(function(result) {
+    }).catch(console.error);
+  </script>
+</body>
+</html>
