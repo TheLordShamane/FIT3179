@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 2em;
+    color: #333; 
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: column;
+    align-items: center; 
+    flex-direction: column;
+  }
+
+.visualization-container {
+    display: flex;
+    justify-content: column; 
+    align-items: column;
+    gap: 10px; 
+  }
+  
+  #malaysia_map, #Domestic_trend_tourism {
+    width: 100%;
+    height: 500px;
+  }
+  
+  #malaysia_map {
+    flex: 1;
+  }
+  
+  #Domestic_trend_tourism {
+    flex: 1;
+  }
+  
