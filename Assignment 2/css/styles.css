@@ -1,65 +1,41 @@
 /* General body styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center everything horizontally */
-  justify-content: center; /* Center everything vertically */
-  min-height: 100vh; /* Ensure the body takes the full height of the viewport */
-  background-color: #f0f8ff; /* Light background color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center everything vertically */
+    min-height: 100vh;
+    background-color: #f0f8ff; /* Light background color */
 }
 
 h1 {
-  text-align: center;
-  margin: 20px 0;
-  color: #333;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
 }
 
-.visualization-container {
-  display: flex;
-  flex-direction: column; /* Stack boxes vertically */
-  align-items: center; /* Center boxes horizontally */
-  justify-content: center; /* Center container vertically */
-  width: 80%; /* Set a max width for the container */
-  max-width: 1200px; /* Limit the maximum width for larger screens */
-  margin: 0 auto; /* Center container on the page */
-}
-
-/* Style for each visualization box */
 .box {
-  width: 100%; /* Full width of the container */
-  max-width: 2000px; /* Cap max width for larger screens */
-  margin: 15px; /* Space around boxes */
-  padding: 20px; /* Space inside boxes */
-  border-radius: 10px; /* Rounded corners */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  color: white; /* Text color */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  height: 550px; /* Increased height for the box */
+    background-color: #ffe5e5; /* Whitish red background */
+    width: 90%; /* Full width of the container */
+    max-width: 1000px; /* Limit maximum width */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Different background colors for each box */
-.box:nth-child(1) {
-  background-color: #4a90e2; /* Blue */
-}
-
-.box:nth-child(2) {
-  background-color: #e94e77; /* Pink */
-}
-
-.box:nth-child(3) {
-  background-color: #3bb273; /* Green */
-}
-
-/* Visualization container styles */
+/* Set size for visualizations */
 #malaysia_map, #Domestic_trend_tourism, #point_of_entry {
-  width: 150%; /* Take up 90% of the box's width */
-  max-width: 1000px; /* Cap max width for larger screens */
-  height: 500px; /* Set a comfortable height, slightly bigger */
-  margin: auto; /* Center the graph within the box */
+    height: 400px; /* Uniform height for all visualizations */
+    width: 80%; /* Full width inside the box */
+}
+
+p {
+    text-align: center;
+    color: #333;
+    margin-top: 15px;
+    font-size: 1.1em;
 }

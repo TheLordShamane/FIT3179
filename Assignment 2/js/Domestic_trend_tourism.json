@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
+  "width": 800,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Week%2010%20Homework/Data/cleaned_domestic_visitors_2017_2023.csv",
