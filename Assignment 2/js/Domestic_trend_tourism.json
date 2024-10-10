@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Domestic Visitors by State (2017-2023)",
   "width": 900,
   "height": 400,
   "data": {
