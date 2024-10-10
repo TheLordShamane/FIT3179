@@ -21,6 +21,8 @@
   <!-- Div for Domestic Tourism Trend -->
   <div id="Domestic_trend_tourism"></div>
 
+  <div id="point_of_entry"></div>
+
   <script type="text/javascript">
     // Embed Malaysia map visualization
     var malaysiaMapSpec = "js/malaysia_map.json";
@@ -31,6 +33,11 @@
     var domesticTourismTrendSpec = "js/Domestic_trend_tourism.json";
     vegaEmbed('#Domestic_trend_tourism', domesticTourismTrendSpec).then(function(result) {
     }).catch(console.error);
+
+    var pointOfEntrySpec = "js/point_of_entry.json"
+    vegaEmbed('#point_of_entry', pointOfEntrySpec).then(function(result){
+    }).catch(console.error);
+
   </script>
 </body>
 </html>

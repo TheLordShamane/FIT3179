@@ -3,6 +3,7 @@
     "description": "Pie chart showing tourist arrivals by mode of entry in 2023 as percentages",
     "height":300,
     "width":500,
+    "title": "Mode of entry into Malaysia (%)",
     "data": {
       "values": [
         {"mode": "Air", "tourists": 7394824},

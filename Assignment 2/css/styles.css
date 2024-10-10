@@ -33,4 +33,8 @@ body, html {
   #Domestic_trend_tourism {
     flex: 1;
   }
+
+  #point_of_entry{
+    flex: 1,
+  }
   
