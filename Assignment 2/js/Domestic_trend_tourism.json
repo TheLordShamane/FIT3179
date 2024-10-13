@@ -62,7 +62,7 @@
     "y": {
       "field": "Visitors",
       "type": "quantitative",
-      "title": "Number of Visitors"
+      "title": "Number of Visitors ('000)"
     },
     "color": {
       "field": "State",
@@ -99,7 +99,7 @@
     "tooltip": [
       {"field": "State", "type": "nominal"},
       {"field": "Year", "type": "ordinal"},
-      {"field": "Visitors", "type": "quantitative"}
+      {"field": "Visitors", "type": "quantitative", "format": ".2f"}
     ]
   },
   "layer": [
