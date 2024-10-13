@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"mode": "Air", "value": 3049120.41},
+        {"mode": "Land", "value": 4635992.34},
+        {"mode": "Sea", "value": 465260.88},
+        {"mode": "Rail", "value": 157856.37}
+      ]
+    },
+    "mark":{
+      "type": "arc",
+      "innerRadius": 50
+    },
+    "encoding": {
+      "theta": {
+        "field": "value",
+        "type": "quantitative",
+        "stack": "normalize"
+      },
+      "color": {
+        "field": "mode",
+        "type": "nominal",
+        "legend": {"title": "Mode of Entry"}
+      },
+      "tooltip": [
+        {"field": "mode", "type": "nominal", "title": "Mode"},
+        {"field": "value", "type": "quantitative", "title": "Value"}
+      ]
+    },
+    "view": {
+      "stroke": null
+    },
+    "config": {
+      "view": {
+        "stroke": null
+      }
+    }
+  }
+  
