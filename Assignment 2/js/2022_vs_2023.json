@@ -17,7 +17,7 @@
             "field": "Total_2022_Visitors",
             "type": "quantitative",
             "title": "2022 Visitors",
-            "axis": {"titleColor": "#1f77b4"}
+            "axis": {"titleColor": "black"}
           },
           "color": {"value": "#1f77b4"},
           "tooltip": [
@@ -44,7 +44,7 @@
             "field": "Total_2023_Visitors",
             "type": "quantitative",
             "title": "2023 Visitors",
-            "axis": {"titleColor": "#ff7f0e"}
+            "axis": {"titleColor": "black"}
           },
           "color": {"value": "#ff7f0e"},
           "tooltip": [

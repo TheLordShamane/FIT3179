@@ -1,35 +1,64 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "title": "Domestic Visitors by State (2017-2023)",
+  "width": 900,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Week%2010%20Homework/Data/cleaned_domestic_visitors_2017_2023.csv",
-    "format": {
-      "type": "csv"
-    }
+    "format": {"type": "csv"}
   },
   "params": [
     {
       "name": "state_selection",
       "bind": {
         "input": "select",
-        "options": [null, "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", "Sarawak"],
-        "labels": ["All", "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", "Sarawak"],
+        "options": [
+          null,
+          "Labuan",
+          "Melaka",
+          "Kuala Lumpur",
+          "Selangor",
+          "Kedah",
+          "Johor",
+          "Penang",
+          "Negeri Sembilan",
+          "Perlis",
+          "Perak",
+          "Pahang",
+          "Sabah",
+          "Putrajaya",
+          "Terengganu",
+          "Kelantan",
+          "Sarawak"
+        ],
+        "labels": [
+          "All",
+          "Labuan",
+          "Melaka",
+          "Kuala Lumpur",
+          "Selangor",
+          "Kedah",
+          "Johor",
+          "Penang",
+          "Negeri Sembilan",
+          "Perlis",
+          "Perak",
+          "Pahang",
+          "Sabah",
+          "Putrajaya",
+          "Terengganu",
+          "Kelantan",
+          "Sarawak"
+        ],
         "name": "State Selection: "
       }
     }
   ],
   "transform": [
-    {
-      "filter": "state_selection == null || datum.State == state_selection"
-    }
+    {"filter": "state_selection == null || datum.State == state_selection"}
   ],
   "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal",
-      "title": "Year"
-    },
+    "x": {"field": "Year", "type": "ordinal", "title": "Year"},
     "y": {
       "field": "Visitors",
       "type": "quantitative",
@@ -40,9 +69,32 @@
       "type": "nominal",
       "title": "State",
       "scale": {
-  "domain": ["Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", "Sarawak"],
-  "range": ["#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442", "#0075DC", "#990000", "#0000FF", "#FF4500", "#32CD32", "#800080", "#FFD700", "#FF1493", "#40E0D0"]
-    }
+        "domain": [
+          "Labuan", "Melaka", "Kuala Lumpur", "Selangor", "Kedah", 
+          "Johor", "Penang", "Negeri Sembilan", "Perlis", "Perak", 
+          "Pahang", "Sabah", "Putrajaya", "Terengganu", "Kelantan", 
+          "Sarawak"
+        ],
+        "range": [
+                "#FF4500",  
+                "#00FFFF",  
+                "#FFD700", 
+                "#800020",  
+                "#000000",  
+                "#FF00FF",  
+                "#8A2BE2",  
+                "#1E90FF",  
+                "#00BFFF",  
+                "#DC143C",  
+                "#808080", 
+                "#FF6347",  
+                "#FFB6C1",
+                "#FF7F50",  
+                "#000080",  
+                "#800080" 
+          ]
+
+        }
     },
     "tooltip": [
       {"field": "State", "type": "nominal"},
@@ -50,5 +102,9 @@
       {"field": "Visitors", "type": "quantitative"}
     ]
   },
-  "mark": "line"
+  "layer": [
+    {"mark": {"type": "line", "point": true, "tooltip": true}},
+    {"mark": {"type": "point", "filled": true, "size": 100}}
+  ],
+  "config": {}
 }
