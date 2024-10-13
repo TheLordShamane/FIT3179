@@ -20,10 +20,16 @@
     "mark": "arc",
     "encoding": {
       "theta": {"field": "percentage", "type": "quantitative"},
-      "color": {"field": "mode", "type": "nominal"},
+      "color": {"field": "mode", 
+      "type": "nominal",
+      "scale": {
+        "domain": ["Land", "Air", "Sea", "Rail"],
+        "range": ["green", "orange", "blue", "gray"]
+      }
+    },
       "tooltip": [
-        {"field": "mode", "type": "nominal"},
-        {"field": "percentage", "type": "quantitative", "format": ".2f"}
+        {"field": "mode", "type": "nominal", "title": "Mode"},
+        {"field": "percentage", "type": "quantitative","title": "Percentage", "format": ".2f"}
       ]
     },
     "view": {"stroke": null}

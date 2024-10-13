@@ -2,19 +2,25 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "values": [
-      {"mode": "Air", "value": 3049120.41},
-      {"mode": "Land", "value": 4635992.34},
-      {"mode": "Sea", "value": 465260.88},
-      {"mode": "Rail", "value": 157856.37}
+      {"mode": "Air", "value": 851000},
+      {"mode": "Land", "value": 7003000},
+      {"mode": "Sea", "value": 101000},
+      {"mode": "Rail", "value": 353000}
     ]
   },
+  "transform": [
+      {
+        "calculate": "(datum.value / 8308230) * 100",
+        "as": "sg_percentage"
+      }
+    ],
   "mark": {
     "type": "arc",
     "innerRadius": 50
   },
   "encoding": {
     "theta": {
-      "field": "value",
+      "field": "sg_percentage",
       "type": "quantitative",
       "stack": "normalize"
     },
@@ -29,7 +35,7 @@
     },
     "tooltip": [
       {"field": "mode", "type": "nominal", "title": "Mode"},
-      {"field": "value", "type": "quantitative", "title": "Value"}
+      {"field": "sg_percentage", "type": "quantitative", "title": "Percentage(%)", "format":".1f"}
     ]
   },
   "view": {
