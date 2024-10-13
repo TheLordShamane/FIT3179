@@ -15,7 +15,10 @@
 
 <body>
   <!-- Header for the page -->
-  <h1>Tourism in Malaysia</h1>
+   <header>
+    <h1>Tourism in Malaysia</h1>
+  </header>
+  
 
   <!-- Box for the Malaysia map -->
   <div class="box">
@@ -38,6 +41,14 @@
   <div class="box">
     <div id="world_map"></div>
   </div>
+
+  <div id="Vs_bar"></div>
+  <div id="Area_chart"></div>
+  <div id="Singapore_donut"></div>
+  <div id="population_pyramid"></div>
+  <div id="top_10"></div>
+  <div id="bump_rank"></div>
+
   
 
   <script type="text/javascript">
@@ -59,6 +70,31 @@
     var worldMapSpec = "js/world_map.json"
     vegaEmbed('#world_map', worldMapSpec).then(function(result){
     }).catch(console.error);
+
+    var AreaChartSpec = "js/Area_chart.json"
+    vegaEmbed('#Area_chart', AreaChartSpec).then(function(result){
+    }).catch(console.error);
+
+    var SgDonutSpec = "js/Singapore_donut.json"
+    vegaEmbed('#Singapore_donut', SgDonutSpec).then(function(result){
+    }).catch(console.error);
+
+    var pplPyramidSpec = "js/population_pyramid.json"
+    vegaEmbed('#population_pyramid', pplPyramidSpec).then(function(result){
+    }).catch(console.error);
+
+    var top10Spec = "js/top_10.json"
+    vegaEmbed('#top_10', top10Spec).then(function(result){
+    }).catch(console.error);
+
+    var bumpRankSpec = "js/rank_bump_chart.json"
+    vegaEmbed('#bump_rank', bumpRankSpec).then(function(result){
+    }).catch(console.error);
+
+    var horBarSpec = "js/2022_vs_2023.json"
+    vegaEmbed('#Vs_bar', horBarSpec).then(function(result){
+    }).catch(console.error);
+
   </script>
 </body>
 </html>
