@@ -70,7 +70,7 @@
             "scale": {
               "type": "threshold",
               "domain": [3, 5, 7, 9, 11],
-              "range": ["#eeeeee", "#f26161", "#f03939", "#ea0909", "#a50404", "#6e0000"]
+              "range": ["#FFCCCC","#FF9999", "#FF6666", "#FF3333","#CC0000","#990000"]
             },
             "legend": {"title": "Tourists (%)"}
           },

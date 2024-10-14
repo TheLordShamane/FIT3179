@@ -15,8 +15,42 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  position: relative; /* Set relative positioning for overlay */
+  position: relative;
 }
+
+.bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center;     /* Vertically centers the content */
+}
+
+
+/* body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 50%; 
+  width: 1px; 
+  height: 100vh; 
+  background-color: red; 
+  z-index: 9999; 
+  transform: translateX(-50%); 
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%; 
+  left: 0;
+  width: 100vw; 
+  height: 1px; 
+  background-color: red; 
+  z-index: 9999; 
+  transform: translateY(-50%); 
+} */
 
 /* Header Styles */
 header {
@@ -105,16 +139,14 @@ footer{
 .row_right {
   display: flex;
   justify-content: space-between; /* Maintain spacing between elements */
-  align-items: flex-start;
   width: 100%;
 }
 
 .row_center{
   display: flex;
-  justify-content: space-between; /* Maintain spacing between elements */
+  justify-content: center; /* Maintain spacing between elements */
   align-items: center;
   width: 100%;
-
 }
 
 #point_of_entry, #Singapore_donut {
@@ -123,20 +155,33 @@ footer{
   margin-right: 20px; /* Maintain gap between graphs */
 }
 
+.chart-wrapper {
+  margin-left: -3rem;
+}
+
 #top_10 {
   flex: 1;
   height: 200px;
+  margin-left: 200px;
 }
 
 #population_pyramid {
   flex: 1;
   height: 400px;
-  margin-right: 20px; /* Maintain gap */
+  margin-left: 200px; /* Maintain gap */
+  padding-right: 0px;
 }
 
 #Area_chart {
   flex: 1;
   height: 300px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+#Domestic_trend_tourism{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Paragraph styles */
@@ -145,6 +190,20 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
+}
+
+#Singapore_donut {
+  margin-left: 10rem;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#Vs_bar {
+  margin-left: 4rem;
+}
+
+#bump_rank {
+  margin-left: 20px;
 }
 
 /* Media queries for responsiveness */

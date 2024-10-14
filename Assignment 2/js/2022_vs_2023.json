@@ -25,7 +25,7 @@
             {"field": "Total_2022_Visitors", "type": "quantitative", "title": "2022 Visitors"}
           ]
         },
-        "width": 300,
+        "width": 400,
         "height": 200
       },
       {
@@ -52,7 +52,7 @@
             {"field": "Total_2023_Visitors", "type": "quantitative", "title": "2023 Visitors"}
           ]
         },
-        "width": 300,
+        "width": 400,
         "height": 200
       }
     ]

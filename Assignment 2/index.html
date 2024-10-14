@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIT3179 Viz 2</title>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIT3179 Viz 2</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   
-    <!-- AOS Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
   
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-  </head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
 
 <body>
   <header>
     <h1>Tourism in Malaysia</h1>
   </header>
   
+  <div class="bg">
+    <div>
   <div class="container">
     <div class="head_text_container"><h2>Visitors into Malaysia</h2></div>
     <div class="row_center">
       <div id="malaysia_map" data-aos="fade-right" data-aos-duration="1000"></div>
     </div>
-
-  
+    <h3>Mode of Entry</h3>
     <div class="row_right">
       <div id="point_of_entry" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
         <h3>Most Visited States</h3>
-        <p>This will give a small description of States Visited.</p>
+        <p>The data on tourist arrivals in Malaysia reveals that <b>Johor</b> is the most popular destination, attracting approximately <b>8.9 million visitors</b>. In contrast, states like <b>Labuan and Putrajaya</b> experience much lower tourist numbers, with just 164,000 and 501,000 visitors, respectively.</p>
           
         <h3>Mode of Entry into Malaysia</h3>
-        <p>This will summarize the pie chart.</p>
+        <p> Malaysia reveals that the predominant method is by land, with approximately <b>11.2 million tourists</b> (about 56% of the total). This is followed by air travel, which accounts for around 7.4 million tourists (approximately 37%). Sea travel sees about 1.1 million tourists (around 6%), while rail is the least utilized mode, with only 388,781 tourists (about 2%).</p>
       </div>
     </div>
   
     <h2>World Map of Visitors</h2>
-    <div class="row_center"><div id="world_map" data-aos="fade-right" data-aos-duration="1000"></div></div>
+    <div class="row_center">
+      <div id="world_map" data-aos="fade-right" data-aos-duration="1000"></div>
+    </div>
   
     <div class="row">
       <div class="text-container">
@@ -53,28 +56,38 @@
     </div>
     
     <!-- New section for Singaporean's Mode of Entry -->
-    <div class="row_center"> <!-- Center the row -->
-       <!-- Title for the donut chart -->
+    <h3>Singaporean's Mode of Entry</h3>
+    <div class="row_right">
       <div id="Singapore_donut" data-aos="fade-right" data-aos-duration="1000"></div>
-      <h3>Singaporean's Mode of Entry</h3>
     </div>
   </div>
   
   <div class="container">
     <div class="head_text_container"><h2>Visitors by Age and Gender</h2></div>
+    
+    <!-- Row with Vs_bar chart followed by text -->
     <div class="row">
       <div id="Vs_bar" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
-        <h3>Comparison of Visitors by Gender</h3>
-        <p>This chart compares the number of male and female visitors.</p>
+        <h3>Age Distribution in 2022 and 2023</h3>
+        <p>The visitor data shows growth across all age groups from 2022 to 2023. The <b>15-24</b> group increased by <b>22.7%</b>, from <b>31,838.44</b> to <b>39,065.91</b> visitors.</p> <p>The <b>25-39</b> group saw the largest rise, growing by <b>26.5%</b> from <b>54,598.35</b> to <b>69,075.64</b>, remaining the most populous group.</p> <p>The <b>40-54</b> group grew by <b>23.4%</b>, and the <b>≥55</b> group by <b>20.3%</b>. Overall, all age groups experienced growth, with the <b>25-39</b> group leading the increase.</p>
       </div>
-      <div id="Area_chart" data-aos="fade-right" data-aos-duration="1000"></div>
     </div>
-  
+    
+    <!-- Row with population_pyramid chart and then text -->
     <div class="row">
+      <div class="text-container age">
+        <h3>Gender Based Analysis</h3>
+        <p>The data shows the distribution of visitors by gender across different age groups. In the <b>15-24</b> age group, there were <b>26.71 million</b> male visitors and <b>23.94 million</b> female visitors.</p> <p>The <b>25-39</b> age group had the highest number of visitors, with <b>43.85 million</b> males and <b>38.87 million</b> females.</p> <p>In the <b>40-54</b> age group, there were <b>32.06 million</b> male visitors and <b>29.96 million</b> female visitors. </p> <p>The <b>55 and above</b> group had <b>21.37 million</b> male visitors and <b>12.59 million</b> female visitors, the lowest numbers across both genders.</p>
+      </div>
       <div id="population_pyramid" data-aos="fade-right" data-aos-duration="1000"></div>
+    </div>
+    
+    <!-- Row with Area_chart followed by text -->
+    <div class="row">
+      <div id="Area_chart" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
-        <h3>Distribution of Male and Female Visitors</h3>
+        <h3>Distribution of Male and Female arrivals</h3>
         <p>This chart shows the age distribution of male and female visitors.</p>
       </div>
     </div>
@@ -82,7 +95,9 @@
   
   <div class="container">
     <div class="head_text_container"><h2>Local Tourism</h2></div>
-    <div id="Domestic_trend_tourism" data-aos="fade-right" data-aos-duration="1000"></div>
+    <div class="row_center">
+      <div id="Domestic_trend_tourism" data-aos="fade-right" data-aos-duration="1000"></div>
+    </div>
     <div class="row">
       <div id="bump_rank" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
@@ -91,6 +106,9 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+
   <script type="text/javascript">
     const embedCharts = (specs) => {
       for (const [id, spec] of Object.entries(specs)) {
@@ -111,11 +129,11 @@
       Vs_bar: "js/2022_vs_2023.json"
     });
   </script>
+  
   <script>
     AOS.init();
   </script>
-<footer>
-  
-</footer>
+
+  <footer></footer>
 </body>
 </html>
