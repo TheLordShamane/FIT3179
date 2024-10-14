@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIT3179 Viz 2</title>
-  <!-- Import Vega & Vega-Lite -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-
-  <!-- Link to the CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT3179 Viz 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  </head>
 
 <body>
-  <!-- Header for the page -->
   <header>
     <h1>Tourism in Malaysia</h1>
   </header>
@@ -22,128 +23,92 @@
   <div class="container">
     <div class="head_text_container"><h2>Visitors into Malaysia</h2></div>
     
-    <!-- Malaysia Map -->
-    <div id="malaysia_map"></div>
+    <div id="malaysia_map" data-aos="fade-right" data-aos-duration="1000"></div>
   
-    <!-- First row with Point of Entry and Textbox 1 inside a red background container -->
     <div class="row_right">
-      <div id="point_of_entry"></div>
+      <div id="point_of_entry" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
         <h3>Most Visited States</h3>
-        <p>This will give small description of States Visited</p>
+        <p>This will give a small description of States Visited.</p>
           
         <h3>Mode of Entry into Malaysia</h3>
-        <p>This will summarize the pie chart</p>
-
+        <p>This will summarize the pie chart.</p>
       </div>
     </div>
   
-    <!-- World Map -->
-    <h2>World Map of visitors</h2>
-    <div id="world_map"></div>
+    <h2>World Map of Visitors</h2>
+    <div id="world_map" data-aos="fade-right" data-aos-duration="1000"></div>
   
-    <!-- Singapore's Mode of Entry section with text container -->
     <div class="row">
       <div class="text-container">
         <div class="description-2">
-          <h3>The Top country Visitors</h3>
-          <p>From the graph, we can see that the highest amout of visitors are from <b>Singapore</b>. With almost <b>8 million people</b> visiting from Singapore which explains Johor being the most visited state in Malaysia.</p>
+          <h3>The Top Country Visitors</h3>
+          <p>From the graph, we can see that the highest amount of visitors are from <b>Singapore</b>, with almost <b>8 million people</b> visiting. This explains why Johor is the most visited state in Malaysia.</p>
           <p>In the graph below, it shows that Singaporeans entered into Malaysia via <b>Land with 84%</b> through the border into Johor.</p>
         </div>
       </div>
-      <div id="top_10"></div>
-      
+      <div id="top_10" data-aos="fade-right" data-aos-duration="1000"></div>
     </div>
+    
     <div class="row">
-    
-      <div id="Singapore_donut"></div>
+      <div id="Singapore_donut" data-aos="fade-right" data-aos-duration="1000"></div>
     </div>
-    <!-- Singapore Donut centered below description-2 and top_10 -->
-    
   </div>
   
-  <!-- New Container for Visitors by Age and Gender -->
   <div class="container">
-     <div class="head_text_container"><h2>Visitors by Age and Gender</h2></div>
-     <div class="row">
-      <div id="Vs_bar"></div>
-      <div class="text-container">
-        <h2></h2>
-        <p></p>
-      </div>
-      <div id="Area_chart"></div>
-    </div>
-
+    <div class="head_text_container"><h2>Visitors by Age and Gender</h2></div>
     <div class="row">
-      <div id="population_pyramid"></div>
+      <div id="Vs_bar" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
-        <h3>Distribution In Male and Female</h3>
-        <p></p>
+        <h3>Comparison of Visitors by Gender</h3>
+        <p>This chart compares the number of male and female visitors.</p>
+      </div>
+      <div id="Area_chart" data-aos="fade-right" data-aos-duration="1000"></div>
+    </div>
+  
+    <div class="row">
+      <div id="population_pyramid" data-aos="fade-right" data-aos-duration="1000"></div>
+      <div class="text-container">
+        <h3>Distribution of Male and Female Visitors</h3>
+        <p>This chart shows the age distribution of male and female visitors.</p>
       </div>
     </div>
-    
-    
   </div>
-
-  <!-- New Container for Local Tourism -->
+  
   <div class="container">
     <div class="head_text_container"><h2>Local Tourism</h2></div>
-    
-    <div id="Domestic_trend_tourism"></div>
+    <div id="Domestic_trend_tourism" data-aos="fade-right" data-aos-duration="1000"></div>
     <div class="row">
-      <div id="bump_rank"></div>
+      <div id="bump_rank" data-aos="fade-right" data-aos-duration="1000"></div>
       <div class="text-container">
-        <h3></h3>
-        <p></p>
-        <p></p>
+        <h3>Ranked Local Tourism</h3>
+        <p>This chart shows the ranking of local tourism over the years.</p>
       </div>
+    </div>
   </div>
-  </div>
-
   <script type="text/javascript">
-    // Embed Malaysia map visualization
-    var malaysiaMapSpec = "js/malaysia_map.json";
-    vegaEmbed('#malaysia_map', malaysiaMapSpec).then(function(result) {
-    }).catch(console.error);
+    const embedCharts = (specs) => {
+      for (const [id, spec] of Object.entries(specs)) {
+        vegaEmbed(`#${id}`, spec).catch(console.error);
+      }
+    };
 
-    // Embed Domestic Tourism Trend visualization
-    var domesticTourismTrendSpec = "js/Domestic_trend_tourism.json";
-    vegaEmbed('#Domestic_trend_tourism', domesticTourismTrendSpec).then(function(result) {
-    }).catch(console.error);
-
-    // Embed Point of Entry visualization
-    var pointOfEntrySpec = "js/point_of_entry.json";
-    vegaEmbed('#point_of_entry', pointOfEntrySpec).then(function(result) {
-    }).catch(console.error);
-
-    var worldMapSpec = "js/world_map.json";
-    vegaEmbed('#world_map', worldMapSpec).then(function(result){
-    }).catch(console.error);
-
-    var AreaChartSpec = "js/Area_chart.json";
-    vegaEmbed('#Area_chart', AreaChartSpec).then(function(result){
-    }).catch(console.error);
-
-    var SgDonutSpec = "js/Singapore_donut.json";
-    vegaEmbed('#Singapore_donut', SgDonutSpec).then(function(result){
-    }).catch(console.error);
-
-    var pplPyramidSpec = "js/population_pyramid.json";
-    vegaEmbed('#population_pyramid', pplPyramidSpec).then(function(result){
-    }).catch(console.error);
-
-    var top10Spec = "js/top_10.json";
-    vegaEmbed('#top_10', top10Spec).then(function(result){
-    }).catch(console.error);
-
-    var bumpRankSpec = "js/rank_bump_chart.json";
-    vegaEmbed('#bump_rank', bumpRankSpec).then(function(result){
-    }).catch(console.error);
-
-    var horBarSpec = "js/2022_vs_2023.json";
-    vegaEmbed('#Vs_bar', horBarSpec).then(function(result){
-    }).catch(console.error);
-
+    embedCharts({
+      malaysia_map: "js/malaysia_map.json",
+      Domestic_trend_tourism: "js/Domestic_trend_tourism.json",
+      point_of_entry: "js/point_of_entry.json",
+      world_map: "js/world_map.json",
+      Area_chart: "js/Area_chart.json",
+      Singapore_donut: "js/Singapore_donut.json",
+      population_pyramid: "js/population_pyramid.json",
+      top_10: "js/top_10.json",
+      bump_rank: "js/rank_bump_chart.json",
+      Vs_bar: "js/2022_vs_2023.json"
+    });
   </script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
