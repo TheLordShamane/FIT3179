@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Map showing tourists arriving in Malaysia by country in 2023",
-  "width": 800,
-  "height": 600,
+  "width":1000,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Assignment%202/Data/Countries_tourists_visited_with_lat_long.csv",
     "format": {

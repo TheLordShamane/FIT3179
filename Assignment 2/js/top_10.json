@@ -1,8 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Top 10 Countries by Visitors in 2023 (in thousands)",
-    "width":300,
-    "height":200,
+    "width":500,
+    "height":300,
     "data": {
       "values": [
         {"COUNTRY": "SINGAPORE", "Visitors_2023": 8308230, "color": "#FF0000"},

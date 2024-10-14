@@ -37,7 +37,9 @@
             {"field": "Age Group", "type": "nominal"},
             {"field": "Female Visitors (Million)", "type": "quantitative", "format": ".2f"}
           ]
-        }
+        },
+        "width":200,
+        "height": 300
       },
       {
         "title": "Age Group",
@@ -58,7 +60,9 @@
           "color": {
             "value": "black"
           }
-        }
+        },
+        "width":200,
+        "height": 300
       },
       {
         "title": "Male",
@@ -90,7 +94,9 @@
             {"field": "Age Group", "type": "nominal"},
             {"field": "Male Visitors (Million)", "type": "quantitative", "format": ".2f"}
           ]
-        }
+        },
+        "width":200,
+        "height": 300
       }
     ],
     "config": {

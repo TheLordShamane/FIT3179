@@ -3,12 +3,12 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e0e0e0; /* Light grey background */
+  background-color: #e0e0e0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensures the body takes up full height */
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -19,102 +19,118 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 60px 0; /* Increased padding for better spacing */
+  padding: 50px 0;
   background-color: black;
   color: white;
+  font-family: 'Playfair Display', serif;
 }
 
-.headings-container {
-  width: 100%; /* Full width */
-  text-align: center;
-}
-
-/* Special typeface for title */
+/* Title styles */
 .title {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   margin-bottom: 20px;
 }
 
-.h2 {
-  font-family: 'Lora', serif;
-  font-size: 2.5rem;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-/* Paragraphs */
-#intro-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #ddd;
-  text-align: center;
-  margin: 20px 0;
-}
-
-/* Main content styles */
-main {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Container for each section */
+/* Container Styles */
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Vertically center */
-  width: 90%; /* Constrain content width */
-  max-width: 1000px; /* Maximum width of the container */
+  width: 100%;
+  max-width: 1200px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
   margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Text Styles inside the container */
-.text h3 {
-  font-family: 'Lora', serif;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+/* Red background container for text */
+.text-container {
+  background-color: #f8d7da;
+  padding: 15px; /* Reduced padding inside the text box */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px; /* Reduced margin between text container and next section */
 }
-
-.text p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+.head_text_container{
+  background-color: #f8d7da;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
   text-align: center;
 }
 
-/* Styles for the graphs */
-#malaysia_map,
-#Domestic_trend_tourism,
-#point_of_entry {
-  height: 400px;
-  width: 90%;
-  max-width: 900px; /* Constrain width for better centering */
-  margin: 20px auto; /* Center the graphs */
-  border: 1px solid #ddd;
+/* Fixed-width for description boxes */
+.description, .description-2 {
+  max-width: 400px;
+  text-align: left;
 }
 
-/* Paragraph Styles */
+/* Malaysia map */
+#malaysia_map,
+#world_map{
+  height: 500px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Point of entry chart and text box */
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 5px 0; /* Reduced space between the graph and text container */
+  align-self: self-end;
+}
+
+.row_right {
+  display: flex;
+  justify-content: right;
+  align-items:self-start;
+  width: 100%;
+  gap: 10px; /* Reduced gap between the description and top 10 chart */
+}
+
+.row_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px; /* Reduced space between graphs and centered row */
+}
+
+#point_of_entry, #Singapore_donut {
+  flex: 1;
+  height: 300px;
+  width: 300px;
+}
+
+#top_10 {
+  flex: 1;
+  height: 200px;
+  width: 300px;
+}
+
 p {
-  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #333;
 }
+#population_pyramid{
+  flex: 1;
+  height: 400;
+  width: 200;
 
-/* Animations */
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
 }
-
-[data-aos].aos-animate {
-  opacity: 1;
+#Area_chart{
+  flex: 1;
+  height: 300;
+  width: 400;
 }

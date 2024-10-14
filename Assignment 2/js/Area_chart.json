@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Arrivals by Gender(2020-2023)",
     "width": 300,
-    "height": 200,
+    "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Assignment%202/Data/arrivals.csv",
       "format": {
