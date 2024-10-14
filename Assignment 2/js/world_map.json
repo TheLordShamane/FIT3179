@@ -13,7 +13,7 @@
     {"calculate": "datum['COUNTRY OF NATIONALITY']", "as": "country"},
     {"calculate": "datum['2023']", "as": "tourists_2023"}
   ],
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "equirectangular"},
   "layer": [
     {
       "data": {

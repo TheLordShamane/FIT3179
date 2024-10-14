@@ -109,6 +109,14 @@ footer{
   width: 100%;
 }
 
+.row_center{
+  display: flex;
+  justify-content: space-between; /* Maintain spacing between elements */
+  align-items: center;
+  width: 100%;
+
+}
+
 #point_of_entry, #Singapore_donut {
   flex: 1;
   height: 300px;
