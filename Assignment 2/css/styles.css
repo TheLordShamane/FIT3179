@@ -4,10 +4,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e0e0e0; /* Fallback background color */
-  background-image: url('https://r2.flux1.ai/result-3RiDGb0vFP.png'); /* Background image */
+  background-image: url('https://imagegallery.tourism.gov.my/fotoweb/cache/v2/6/z/Kuala%20Lumpur/KL%20SKYSCAPE/Top%20view%20of%20Kuala%20Lumper%20skyline%20at%20twilight.jpeg.pye-ifroMV2TOZdjgBkA.JTZZ_7_bCx.jpg'); /* Background image */
   background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the image */
-  background-repeat: repeat; /* Don't repeat the image */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
