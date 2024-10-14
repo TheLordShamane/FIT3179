@@ -30,6 +30,17 @@ header {
   color: white;
   font-family: 'Playfair Display', serif;
 }
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
 
 /* Container Styles */
 .container {
@@ -47,6 +58,16 @@ header {
 
 /* Red background container for text */
 .text-container {
+  background-color: #f8d7da;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.foot_container{
   background-color: #f8d7da;
   padding: 15px;
   border-radius: 10px;
