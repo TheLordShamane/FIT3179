@@ -21,10 +21,10 @@ body {
 .bg {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
-  justify-content: center; /* Horizontally centers the content */
-  align-items: center;     /* Vertically centers the content */
+  justify-content: center; 
+  align-items: center;     
 }
 
 
