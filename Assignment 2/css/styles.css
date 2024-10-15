@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e0e0e0; /* Fallback background color */
-  background-image: url('https://imagegallery.tourism.gov.my/fotoweb/cache/v2/6/z/Kuala%20Lumpur/KL%20SKYSCAPE/Top%20view%20of%20Kuala%20Lumper%20skyline%20at%20twilight.jpeg.pye-ifroMV2TOZdjgBkA.JTZZ_7_bCx.jpg'); /* Background image */
+  background-image: url('https://imagegallery.tourism.gov.my/fotoweb/cache/v2/6/z/Kuala%20Lumpur/KL%20SKYSCAPE/Top%20view%20of%20Kuala%20Lumper%20skyline%20at%20twilight.jpeg.pye-ifroMV2TOZdjgBkA.JTZZ_7_bCx.jpg'); 
   background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
 .bg {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center; 
   align-items: center;     
@@ -118,6 +118,7 @@ footer{
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* Malaysia map and World map */
