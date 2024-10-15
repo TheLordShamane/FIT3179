@@ -102,7 +102,7 @@ footer{
 }
 
 .foot_container{
-  background-color: #f8d7da;
+  background-color: black;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -121,11 +121,19 @@ footer{
 }
 
 /* Malaysia map and World map */
-#malaysia_map, #world_map {
+#malaysia_map{
   height: 500px;
   width: 100%;
   max-width: 1000px;
   margin: 20px auto;
+  margin-left: 10rem;
+}
+
+#world_Map{
+  margin-bottom: 20rem;
+  margin-left: 100rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Row styles */
@@ -133,12 +141,19 @@ footer{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 10px 0; /* Increased space between the graph and text container */
+}
+.row-text{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
 }
 
 .row_right {
   display: flex;
-  justify-content: space-between; /* Maintain spacing between elements */
+  width: 100%;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -168,8 +183,9 @@ footer{
 #population_pyramid {
   flex: 1;
   height: 400px;
-  margin-left: 200px; /* Maintain gap */
+  margin-left: 200px; 
   padding-right: 0px;
+  margin-bottom: 0;
 }
 
 #Area_chart {
@@ -182,6 +198,7 @@ footer{
 #Domestic_trend_tourism{
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 60px;
 }
 
 /* Paragraph styles */
@@ -203,7 +220,7 @@ p {
 }
 
 #bump_rank {
-  margin-left: 20px;
+  margin-left: 70px;
 }
 
 /* Media queries for responsiveness */

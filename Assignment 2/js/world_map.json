@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Map showing tourists arriving in Malaysia by country in 2023",
-  "width":1000,
+  "description": "Map showing tourists arriving in Malaysia by country in 2023 with zoom and pan",
+  "width": 1000,
   "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/TheLordShamane/FIT3179/refs/heads/main/Assignment%202/Data/Countries_tourists_visited_with_lat_long.csv",
@@ -13,7 +13,11 @@
     {"calculate": "datum['COUNTRY OF NATIONALITY']", "as": "country"},
     {"calculate": "datum['2023']", "as": "tourists_2023"}
   ],
-  "projection": {"type": "equirectangular"},
+  "projection": {
+    "type": "equirectangular",
+    "scale": {"expr": "zoom"},
+    "translate": [{"signal": "dragX"}, {"signal": "dragY"}]
+  },
   "layer": [
     {
       "data": {
@@ -23,14 +27,14 @@
           "feature": "ne_110m_admin_0_countries"
         }
       },
-      "mark": {"type": "geoshape", "fill": "white", "stroke": "lightgray"}
+      "mark": {"type": "geoshape", "fill": "gray", "stroke": "lightgray"}
     },
-     {
+    {
       "data": {
         "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
         "format": {"type": "topojson", "feature": "oceans"}
       },
-      "mark": {"type": "geoshape", "fill": "skyblue"}
+      "mark": {"type": "geoshape", "fill": "lightblue"}
     },
     {
       "data": {
@@ -40,7 +44,7 @@
       "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
     },
     {
-      "mark": {"type": "circle", "color": "steelblue", "opacity": 0.6},
+      "mark": {"type": "circle", "color": "blue", "opacity": 0.5},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -48,47 +52,45 @@
           "field": "tourists_2023",
           "type": "quantitative",
           "title": "Tourists in 2023",
-          "scale": {"range": [10, 500]}
+          "scale": {"range": [50, 1000]}
         },
         "tooltip": [
           {"field": "country", "type": "nominal", "title": "Country"},
           {"field": "tourists_2023", "type": "quantitative", "title": "Tourists in 2023"}
         ]
       }
+    }
+  ],
+  "params": [
+    {
+      "name": "zoom",
+      "value": 150,
+      "bind": {
+        "input": "range",
+        "min": 150,
+        "max": 2000,
+        "step": 10
+      }
     },
     {
-      "mark": {
-        "type": "rule",
-        "color": "gray",
-        "strokeWidth": 0.5
-      },
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"}
-      },
-      "transform": [
-        {
-          "calculate": "datum.latitude % 10 == 0 ? datum.latitude : null",
-          "as": "lat"
-        }
-      ]
+      "name": "dragX",
+      "value": 500,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1000,
+        "step": 10
+      }
     },
     {
-      "mark": {
-        "type": "rule",
-        "color": "gray",
-        "strokeWidth": 0.5
-      },
-      "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"}
-      },
-      "transform": [
-        {
-          "calculate": "datum.longitude % 10 == 0 ? datum.longitude : null",
-          "as": "lon"
-        }
-      ]
+      "name": "dragY",
+      "value": 250,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 500,
+        "step": 10
+      }
     }
   ]
 }
